@@ -1,0 +1,113 @@
+
+.main{
+    /* overflow: hidden; */
+}
+
+/* header */
+.header{
+    height: 120px;
+    background-image: linear-gradient(0,#fe6433,#f53e2d);
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+    display: flex;
+}
+.header__navbar-item{
+    margin: 0 8px;
+    position: relative;
+    min-height: 26px;
+}
+.header__navbar-item--has-qr:hover .header__qr{
+    display: block;
+}
+.header__navbar-item,
+.header__navbar-item-link{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300; 
+}
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link{
+    display: inline-flex;
+    align-items: center;
+
+}
+.header__navbar-item:hover,
+.header__navbar-icon-link:hover,
+.header__navbar-item-link:hover{
+    color: rgba(255,255,255,.8);
+    cursor: pointer;
+}
+.header__navbar-item--strong{
+    font-weight: 350;
+}
+.header__navbar-item--separate::after{
+    content: "";
+    display: block;
+    position:absolute;
+    border-right: 1px solid #fB9086;
+    top: 50%;
+    height: 14px;
+    right: -9px;
+    transform:translateY(-50%);
+}
+.header__navbar-icon-link{
+    text-decoration: none;
+    color: var(--white-color);
+}
+.header__navbar-icon{
+    font-size: 1.8rem;
+    margin: 0 4px;
+}
+.header__navbar-title--no-pointer{
+    color: var(--white-color);
+    cursor:text;
+}
+
+/* Header QR code */
+
+.header__qr{
+    width: 186px;
+    background-color: var(--white-color);
+    position:absolute;
+    left: 0;
+    top: 118%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn .5s linear;
+}
+.header__qr::before{
+    content: "";
+    display: block;
+    position:absolute;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    transform: translateY(-60%);
+}
+.header__qr-img{
+    width: 100%;
+}
+.header__qr-apps{
+    display: flex;
+    justify-content: space-between;
+}
+.header__qr-link:nth-child(1){
+    margin-left: 11px;
+}
+.header__qr-link:nth-child(2){
+    margin-right: 11px;
+}
+.header__qr-download-img{
+    height: 15px;
+}
