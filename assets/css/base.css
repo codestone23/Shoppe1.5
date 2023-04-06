@@ -3,6 +3,7 @@
     --white-color:#fff;
     --black-color:#000;
     --text-color:#333;
+    --border-color:#dbdbdb;
 }
 
 *{
@@ -51,7 +52,7 @@ html{
     bottom: 0;
     right: 0;
     left: 0;
-    display: flex;
+    display: none;
 }
 .modal__overlay{
     position:absolute;
@@ -61,8 +62,42 @@ html{
 }
 .modal__body{
     position: relative;
-    background-color: var(--white-color);
     margin: auto;
     z-index: 1;
-    border-radius: 5px;
+}
+
+/* button style */
+.btn{
+    min-width:142px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+}
+.btn.btn--normal:hover{
+    background-color: rgba(0, 0, 0, .05);
+}
+.btn--size-s{
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+.btn.btn--primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.btn.btn--disabled{
+    cursor: default;
+    color: #949494;
+    background-color: #c3c3c3;
 }
