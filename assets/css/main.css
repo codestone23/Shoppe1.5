@@ -1,7 +1,7 @@
-/* 
+
 .main{
     overflow: hidden;
-} */
+}
 
 /* header */
 .header{
@@ -437,16 +437,27 @@
     align-items: center;
     margin: 0 8px;
 }
+.header__mobile-search-icon{
+    font-size: 2.6rem;
+    color: var(--white-color);
+    padding: 0 12px;
+}
 .header__logo{
     width: 200px;
 }
 .header__logo-link{
     text-decoration: none;
     color: transparent;
+    line-height: 0;
+    display: block;
 }
 .header__logo-img{
     width: 150px;
 }
+.header__search-checkbox:checked ~ .header__search{
+    display: flex;
+}
+
 .header__search{
     display: flex;
     flex: 1;
@@ -1117,6 +1128,7 @@ i.home-product-item__like-icon-fill{
 
 .home-product__pagination{
     margin: 48px 0 32px 0;
+    padding-left: 0;
 }
 
 /* footer */

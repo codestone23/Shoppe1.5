@@ -48,4 +48,50 @@
     .hide-on-mobile{
         display: none;
     }
+    .header-with-search{
+        justify-content: space-between;
+    }
+    .header__logo,.header__cart{
+        width:unset;
+    }
+    .header__search{
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        height: 46px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        z-index: 1;
+        padding: 0 4px;
+        animation: mobileSearchSideIn .5s linear;
+        display: none;
+    } 
+    .pagination-item{
+        margin: 0;
+    }
+    .pagination-item__link{
+        --height: 28px;
+        font-size: 1.6rem;
+        min-width: 36px;
+    }  
+    .header__search-history{
+        position:fixed;
+        width:100%;
+        top: calc(var(--header-height) + var(--header-sort-bar-height));
+        left: 0;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+    .app__content{
+        margin: 0 5px;
+    }
+    @keyframes mobileSearchSideIn {
+        from {
+            opacity: 0;
+            top: calc(var(--header-height) / 2 );
+        }
+        to{
+            opacity: 1;
+            top: var(--header-height);
+        }
+    }
 }
