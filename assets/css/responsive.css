@@ -33,6 +33,13 @@
     .header__sort-bar{
         display: flex;
     }
+    .app__content{
+        padding-top:8px;
+    }
+    .mobile-category{
+        display:block;
+    }
+    
 }
 /* tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -83,6 +90,16 @@
     }
     .app__content{
         margin: 0 5px;
+    }
+    .header__mobile-search{
+        display:block;
+    }
+    .foooter__content{
+        padding: 0 12px;
+    }
+    .footer__download,
+    .footer-item__link{
+        justify-content: center;
     }
     @keyframes mobileSearchSideIn {
         from {
