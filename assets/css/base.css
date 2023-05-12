@@ -83,6 +83,7 @@ body{
     right: 0;
     left: 0;
     display: none;
+    z-index: 100;
 }
 .modal__overlay{
     position:absolute;
@@ -125,7 +126,7 @@ body{
     font-size: 12px;
     padding: 0 8px;
 }
-.btn.btn--primary{
+.btn.btn--active{
     color: var(--white-color);
     background-color: var(--primary-color);
 }
@@ -146,12 +147,11 @@ body{
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    min-width: 200px;
+    min-width: 150px;
     z-index: 1;
 }
 .select-input__label{
     font-size:1.4rem;
-    flex: 1;
 }
 .select-input__icon{
     font-size: 1.4rem;
@@ -219,4 +219,5 @@ body{
     line-height: var(--height);
     border-radius: 2px;
 }
+
 

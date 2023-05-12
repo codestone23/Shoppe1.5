@@ -23,8 +23,9 @@
     position: relative;
     min-height: 26px;
 }
-.header__navbar-user{
-    display: flex;
+.header__navbar-item.header__navbar-user{
+    /* display: flex; */
+    display: none;
     justify-content: center;
     position: relative;
 }
@@ -127,7 +128,7 @@
 }
 .header__navbar-item--strong{
     font-weight: 350;
-    display: none;
+    /* display: none; */
 }
 .header__navbar-item--separate::after{
     content: "";
@@ -211,7 +212,7 @@
     will-change: opacity, transform;
     cursor: default;
     display: none;
-    z-index: 2;
+    z-index: 3;
 }
 .header__notify::before{
     content: '';
@@ -292,6 +293,13 @@
     line-height: 1.4rem;
     color: #756F6E;
     margin: 6px;
+}
+.header__notify-name,
+.header__notify-description{
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;  
+    overflow: hidden;
 }
 .header__notify-footer{
     text-align: center;
@@ -511,7 +519,7 @@
     display: none;
     animation: fadeIn .2s linear;
     cursor: default;
-    z-index: 1;
+    z-index: 4;
 }
 .header__cart-list--no-cart{
     padding: 24px 0;
@@ -755,7 +763,7 @@
     box-shadow:0 1px 5px rgb(189, 189, 189);
     display: none;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2  ;
 }
 .header__search-history-heading{
     margin: 12px 12px;
@@ -839,23 +847,24 @@
     padding-top:36px;
 }
 .category{
-    background-color:var(--white-color);
+    background-color:rgba(245,245,245,1);
     border-radius: 2px;
 }
 .category__heading{
     font-size: 1.5rem;
     color: var(--text-color);
     padding: 16px 16px 0;
+    padding-left: 0;
     margin-top: 0;
     font-weight: 400;
     text-transform: uppercase;
 }
-/* .category__heading-icon{
+.category__heading-icon{
     font-size:1.4rem;
     margin-right: 4px;
     position: relative;
     top: -1px;
-} */
+}
 .category-list{
     padding:0 0 8px 0;
     list-style: none;
@@ -878,30 +887,52 @@
 .category-item--active .category-item__link{
     color: var(--primary-color);
 }
-/* .category-item--active .category-item__link::before{
+.category-item--active .category-item__link::before{
     content:"";
     top: 50%;
-    left: 8px;
+    left:25px;
     position: absolute;
-    border:4px solid;
+    border:5px solid;
     transform: translateY(-50%);
     border-color: transparent transparent transparent var(--primary-color);
-} */
+}
 .category-item__link{
+    text-align: left;
     position: relative;
     display: block;
     font-size:1.4rem;
     color: var(--text-color);
     text-decoration:none;
-    padding: 8px 20px;
+    padding: 8px 0px 8px 35px;
     line-height: 2rem;
-    /* right: 0;
-    transition: right .1s linear; */
 }
 .category-item__link:hover{
     /* right: -4px; */
     color: var(--primary-color);
 
+}
+.category-item__checkbox{
+    margin: 0;
+    text-align: left;
+    position: relative;
+    display: block;
+    font-size:1.4rem;
+    color: var(--text-color);
+    text-decoration:none;
+    padding: 0px 0px 8px 35px;
+    line-height: 2rem;
+    margin-top: 6px;
+}
+.category-filter__title{
+    margin: 0;
+    text-align: left;
+    position: relative;
+    display: block;
+    font-size:1.4rem;
+    color: var(--text-color);
+    text-decoration:none;
+    padding: 8px 0px 8px 35px;
+    line-height: 2rem;
 }
 
 /* Mobile category */
@@ -1015,6 +1046,12 @@
 }
 
 /* Product item */
+.popular--active,
+.latest--active,
+.bestseller--active{
+    display: none !important;;
+}
+
 
 .home-product{
     margin-bottom: 10px;
@@ -1044,6 +1081,7 @@
     border-top-left-radius:2px ;
 }
 .home-product-item__name{
+    text-align: left;
     display: block;
     display: -webkit-box;
     font-size:1.4rem;
@@ -1070,7 +1108,7 @@
     text-decoration: line-through;
 }
 .home-product-item__price-current{
-    font-size:1.6rem;
+    font-size:1.4rem;
     color: var(--primary-color);
     margin-left: 10px;
 }
@@ -1196,6 +1234,7 @@ i.home-product-item__like-icon-fill{
     background-color: var(--white-color);
 }
 .footer__heading{
+    text-align: left;
     font-size:1.4rem;
     text-transform: uppercase;
     color: var(--text-color);
@@ -1252,4 +1291,7 @@ i.home-product-item__like-icon-fill{
     font-size:1.2rem;
     text-align: center;
     color: #737373;
+}
+.active{
+    display: block!important;
 }
