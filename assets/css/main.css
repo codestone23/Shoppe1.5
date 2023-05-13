@@ -1108,7 +1108,7 @@
     text-decoration: line-through;
 }
 .home-product-item__price-current{
-    font-size:1.4rem;
+    font-size:1.3rem;
     color: var(--primary-color);
     margin-left: 10px;
 }
@@ -1292,6 +1292,8 @@ i.home-product-item__like-icon-fill{
     text-align: center;
     color: #737373;
 }
-.active{
-    display: block!important;
+.popular--active.active,
+.latest--active.active,
+.bestseller--active.active{
+    display: block !important;;
 }
